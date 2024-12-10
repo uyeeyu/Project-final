@@ -1,0 +1,514 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+  
+  }
+  
+  /* Navbar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: rgba(255, 255, 255, 0.7); /* 背景色带透明度 */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* 阴影，增加一点透明感 */
+    position: fixed; /* 固定在顶部 */
+    top: 0; /* 在顶部 */
+    left: 0; /* 从页面的最左侧开始 */
+    width: 100%; /* 宽度占满整个屏幕 */
+    z-index: 1000; /* 确保导航栏位于其他元素之上 */
+    backdrop-filter: blur(10px); /* 背景模糊效果 */
+    -webkit-backdrop-filter: blur(10px); /* 对WebKit浏览器的支持 */
+  }
+  
+  .nav-links a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+  }
+  
+  .btn-primary {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+  }
+  
+  .btn-secondary {
+    color: #007BFF;
+    border: 2px solid #007BFF;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+  }
+  
+  .btn-secondary:hover {
+    background-color: #007BFF;
+    color: #fff;
+  }
+  
+  #getstarted {
+    color: #fff; /* 文本颜色为白色 */
+    background-color: #0066CC; /* 背景颜色为蓝色 */
+    border: 2px solid #0066CC; /* 蓝色边框 */
+    padding: 10px 20px;
+    border-radius: 15px;
+    text-decoration: none;
+    font-weight: bold;
+    z-index: 2; 
+  }
+  
+  /* 鼠标悬停时变化 */
+  #getstarted:hover {
+    background-color: #0056b3; /* 悬停时背景颜色变暗 */
+    border-color: #0056b3; /* 边框颜色变暗 */
+    
+  }
+  .logo {
+    display: flex;
+    align-items: center; /* Aligns items vertically to the center */
+    font-family: 'Montserrat', sans-serif; /* 或者你选择的其他字体 */
+    font-weight: 500; /* 可根据需要调整粗细 */
+    font-size: 20px; /* 根据需求调整字体大小 */
+    letter-spacing: 1px; /* 字间距可以稍微调节，让字体看起来更有设计感 */
+  }
+  
+  
+  .opt {
+    margin-right: 8px; /* Optional: Adds some space between the image and text */
+  }
+
+
+ /* Hero Section */
+.hero {
+  display: flex;
+  justify-content: center; /* 居中对齐内容 */
+  align-items: center;
+  text-align: center; /* 文本居中 */
+  padding: 80px 20px;
+  background: linear-gradient(to bottom, #cecece, #fafafa); /* 上下渐变 */
+  color: #333; /* 字体颜色白色 */
+  height: 100vh; /* 占据整个视口高度 */
+}
+
+.flag{
+  margin:30px;
+}
+.hero-text {
+  max-width: 800px;
+  padding: 20px;
+}
+
+.hero-text h1 {
+  font-size: 70px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.hero-text p {
+  font-size: 20px;
+  margin-bottom: 40px;
+  line-height: 1.5;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* 按钮间距 */
+}
+
+.hero-buttons a {
+  text-decoration: none;
+  padding: 12px 30px;
+  font-size: 20px;
+  font-weight: lighter;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+
+.hero-buttons a:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+
+
+
+
+  /* Features Section */
+.features {
+
+  padding: 60px 20px;
+  /* background-color: #fafafa; */
+  background: linear-gradient(to bottom, #fafafa, #ededed); /* 上下渐变 */
+}
+
+/* Section Title */
+.up, .down{
+  text-align: center;
+}
+.title{
+  font-size: 30px;
+}
+p { 
+  font-size: 20px;
+  margin: .5vh;
+}
+.container{
+  margin: 10vh 5vw;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(5, auto);
+  grid-template-areas: 
+      "Logo1 Keywords2 Logo3 Keywords4 Logo5 Keywords6"
+      "movingicon movingicon movingicon movingicon movingicon movingicon"
+      "Line1 Line2 Line3 Line4 Line5 Line6"
+      "Title1 Title2 Title3 Title4 Title5 Title6"
+      "Keywords1 Logo2 Keywords3 Logo4 Keywords5 Logo6";
+  /* can't name a class or id beginning with number!!!*/
+  overflow: scroll;
+}
+#Logo1{
+  grid-area: Logo1;
+}
+#Logo2{
+  grid-area: Logo2;
+}
+#Logo3{
+  grid-area: Logo3;
+}
+#Logo4{
+  grid-area: Logo4;
+}
+#Logo5{
+  grid-area: Logo5;
+}
+#Logo6{
+  grid-area: Logo6;
+}
+#Keywords1{
+  grid-area: Keywords1;
+}
+#Keywords2{
+  grid-area: Keywords2;
+}
+#Keywords3{
+  grid-area: Keywords3;
+}
+#Keywords4{
+  grid-area: Keywords4;
+}
+#Keywords5{
+  grid-area: Keywords5;
+}
+#Keywords6{
+  grid-area: Keywords6;
+}
+.movingicon{
+  grid-area: movingicon;
+  height: 7rem;
+}
+#Title1{
+  grid-area: Title1;
+}
+#Title2{
+  grid-area: Title2;
+}
+#Title3{
+  grid-area: Title3;
+}
+#Title4{
+  grid-area: Title4;
+}
+#Title5{
+  grid-area: Title5;
+}
+#Title6{
+  grid-area: Title6;
+}
+#Line1{
+  grid-area: Line1;
+}
+#Line2{
+  grid-area: Line2;
+}
+#Line3{
+  grid-area: Line3;
+}
+#Line4{
+  grid-area: Line4;
+}
+#Line5{
+  grid-area: Line5;
+}
+#Line6{
+  grid-area: Line6;
+}
+.line{
+  width: 100%; /* 控制线的宽度 */
+  height: 5px; /* 控制线的高度 (线的粗细) */
+  background-color: black; /* 控制线的颜色 */
+  display: flex; /* 使用 flexbox 布局 */
+  align-items: center; /* 垂直居中对齐点 */
+  justify-content: center; 
+}
+.logo1, .logo2, .keywords1, .keywords2, .title{
+  width: 30rem;
+  display: flex;
+  justify-content: center;
+}
+.keywords1, .keywords2{
+  font-family: Arial, Helvetica, sans-serif;
+}
+.logo1, .keywords2 {
+  align-items: end;
+}
+.logo2, .keywords1{
+  align-items: baseline;
+}
+.title{
+  margin-top: .5rem;
+  margin-bottom: .5rem;
+}
+#icon{
+  position: relative;
+  height: 100%;
+  transform: translateY(10px);
+  animation-name: shake; 
+  animation-duration: 0.5s;
+  animation-timing-function:  ease-in-out; animation-iteration-count: infinite; 
+}
+
+.point {
+  width: 20px;
+  height: 20px; 
+  background-color: black; 
+  border-radius: 50%; 
+}
+.arrow-container {
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  width: 100px; 
+  margin: 20px auto;
+}
+.arrow {
+  font-size: 2rem;
+  margin: 10px; 
+  color: white;
+  padding: 10px;
+  background-color: black; 
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  
+}
+
+.arrow:hover {
+  background-color: #ccc; 
+}
+
+@keyframes shake {
+  0% { transform: translateY(0); }
+  25% { transform: translateY(-5px); }  /* 向上移动 5px */
+  50% { transform: translateY(0); }
+  75% { transform: translateY(5px); }   /* 向下移动 5px */
+  100% { transform: translateY(0); }
+}
+.hidden {
+  display: none; /* 隐藏元素 */
+}
+
+
+
+/* 隐藏类，用于触发动画后隐藏弹窗 */
+.hidden {
+  display: none;
+}
+
+
+/* 弹窗的样式 */
+.popup {
+  display: none; /* 默认不显示 */
+  position: absolute;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  border-radius: 10px;
+  width: 300px;
+  z-index: 10;
+}
+
+.popup-content {
+  font-size: 14px;
+}
+
+
+
+/* 弹窗样式 */
+.popup {
+  position: fixed; /* 固定定位，使弹窗不随页面滚动 */
+  top: 50%; /* 垂直居中 */
+  left: 50%; /* 水平居中 */
+  transform: translate(-50%, -50%); /* 偏移使弹窗真正居中 */
+  max-width: 80%; /* 弹窗的最大宽度 */
+  width: auto; /* 弹窗宽度自适应内容 */
+  background-color: rgba(0, 0, 0, 0.5); /* 半透明背景 */
+  padding: 10px;
+  z-index: 9999; /* 使弹窗在最上层 */
+}
+
+/* 弹窗内容 */
+.popup-content {
+  max-height: 70vh; /* 最大高度限制为视口的70% */
+  overflow-y: auto; /* 超出内容时启用垂直滚动条 */
+  width: 100%; /* 内容区域宽度充满弹窗 */
+  max-width: 500px; /* 限制最大宽度 */
+  background-color: white; /* 白色背景 */
+  padding: 20px;
+  font-size: 14px; /* 设置字体大小 */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 阴影效果 */
+  position: relative;
+}
+
+/* 关闭按钮样式 */
+.close-btn {
+  position: fixed; /* 使用固定定位，使其不随弹窗滚动 */
+  top: 10px; /* 距离顶部10px */
+  right: 10px; /* 距离右侧10px */
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #333;
+  z-index: 10000; /* 确保按钮在弹窗之上 */
+}
+
+/* 默认样式 */
+.keywords2, .keywords1 {
+  cursor: pointer; /* 鼠标悬停时变成点击手形 */
+  transition: all 0.3s ease; /* 平滑过渡效果 */
+  color: black; /* 默认文字颜色为黑色 */
+}
+
+/* 鼠标悬停时的效果 */
+.keywords2:hover {
+  color: #555; /* 字体颜色变深一些，显得更有变化 */
+  transform: translateY(-3px); /* 微小的上移效果，带来动态感 */
+  font-weight: bold; /* 鼠标悬停时加粗字体，让文字更显眼 */
+}
+.keywords1:hover {
+  color: #555; /* 字体颜色变深一些，显得更有变化 */
+  transform: translateY(-3px); /* 微小的上移效果，带来动态感 */
+  font-weight: bold; /* 鼠标悬停时加粗字体，让文字更显眼 */
+}
+  
+  /* Footer */
+  .footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 40px;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .social-links a {
+    margin-left: 10px;
+    color: #fff;
+    text-decoration: none;
+  }
+
+
+
+/* Question Box Styles */
+.question-box {
+  display: flex;  /* 使其可见并居中 */
+  flex-direction: column; 
+  text-align: center;  /* 使问题文本居中 */
+  margin-bottom: 20px;  /* 问题和按钮之间的间距 */
+  display: flex;  /* 使用flex布局来排列按钮 */
+  justify-content: center;  /* 按钮水平居中 */
+  align-items: center;  /* 按钮垂直居中 */
+  
+}
+
+/* Title Styles */
+.question-title {
+  font-size: 16px;  /* 更小的字体 */
+  font-weight: normal;  /* 更细的字体 */
+  line-height: 1.5;  /* 调整行高，使文字显得更轻盈 */
+  color: #555;  /* 更浅的灰色文字 */
+  margin-bottom: 20px;  /* 问题和按钮之间的间距 */
+  font-family: 'Roboto', sans-serif;  /* 选择简洁、现代的字体 */
+  text-align: center;  /* 保证标题居中 */
+}
+
+.year-selector {
+    border: 2px solid white;
+    border-radius: 30px;
+    overflow: hidden;  /* 使内容不溢出圆角 */
+    width: fit-content;  /* 根据内容自适应宽度 */
+    gap: 10px; 
+    background-color: white;
+    
+}
+
+.year-btn {
+  padding: 10px 10px;
+  font-size: 16px;
+  border: none;
+  background-color: white;
+  color: #333;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 120px;  /* 给按钮设置固定宽度 */
+  border-radius: 30px; /* 圆角 */
+}
+
+.year-btn:hover {
+  background-color: #333;
+  color: white;
+}
+
+.year-btn.selected {
+  background-color: #333;
+  color: white;
+  border: none;  /* 选中的按钮去掉边框 */
+}
+
+.year-btn:first-child.selected {
+  border-radius: 30px;  /* 选中第一个按钮时，保持圆角 */
+}
+
+.year-btn:last-child.selected {
+  border-radius: 30px;  /* 选中第二个按钮时，保持圆角 */
+}
+
+
+
+
+
+
