@@ -36,8 +36,20 @@
     color: #333;
     font-weight: 500;
   }
-  
-  .btn-primary {
+
+
+#motivational-message {
+  font-family: 'Montserrat', sans-serif; 
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 100; 
+  color: #333;
+  text-align: center;
+  transition: opacity 1s ease-in-out;
+  letter-spacing: 1px;
+}
+
+  /* .btn-primary {
     background-color: #007BFF;
     color: #fff;
     padding: 10px 20px;
@@ -61,7 +73,7 @@
   .btn-secondary:hover {
     background-color: #007BFF;
     color: #fff;
-  }
+  } */
   
   #getstarted {
     color: #fff; /* 文本颜色为白色 */
@@ -499,6 +511,12 @@ p {
   border: none;  /* 选中的按钮去掉边框 */
 }
 
+/* 悬停到其他按钮时，选中的按钮恢复为默认样式 */
+.year-btn:hover ~ .year-btn.selected {
+  background-color: #333; /* 恢复为默认背景色 */
+  color: white; /* 恢复为默认文字颜色 */
+}
+
 .year-btn:first-child.selected {
   border-radius: 30px;  /* 选中第一个按钮时，保持圆角 */
 }
@@ -506,6 +524,8 @@ p {
 .year-btn:last-child.selected {
   border-radius: 30px;  /* 选中第二个按钮时，保持圆角 */
 }
+
+
 
 
 

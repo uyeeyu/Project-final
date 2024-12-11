@@ -7,7 +7,9 @@
   <link rel="stylesheet" href="styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Jacquarda+Bastarda+9&family=Matemasie&family=Pacifico&family=Permanent+Marker&family=Playpen+Sans:wght@100..800&family=Playwrite+DE+VA+Guides&family=Protest+Guerrilla&family=Shadows+Into+Light&family=Spicy+Rice&display=swap" rel="stylesheet">
    
 </head>
 <body>
@@ -19,10 +21,8 @@
       OPTimize
     </div>
     <nav class="nav-links">
-      <a href="#features">Features</a>
-      <a href="#about">About</a>
-      <a href="#pricing">Pricing</a>
-      <a href="#contact" class="btn-primary" id="getstarted" onclick="Popup()">Get Started</a>
+      <div id="motivational-message"></div>
+      <!-- <a href="#contact" class="btn-primary" id="getstarted" onclick="Popup()">Get Started</a> -->
 
     </nav>
   </header>
@@ -33,7 +33,7 @@
     <div class="hero-text">
       <img src="flag.png" alt="logo" width="70px" class="flag"/>
       <h1>OPTimize Your Career</h1>
-      <p>Designed for F1 visa students to track milestones for CPT and OPT in the U.S.</p>
+      <p>Helping 2-year F1 visa students to track milestones for CPT and OPT in the U.S.</p>
       <div class="hero-buttons">
         <a href="#contact" class="btn-secondary" id="getstarted" onclick="Popup()">Start Your Milestone Tracking</a>
       </div>
@@ -394,6 +394,41 @@ function selectYear(year) {
       }
     }
   });
+  </script>
+  <script>
+  const messages = [
+    "Your journey is just beginning—keep moving forward 💪!",
+    "The best is yet to come—stay focused 🎯🌟",
+    "Challenges today, success tomorrow 💥—keep going!",
+    "Believe in yourself; your dreams are closer than you think ✨.",
+    "Every step forward is a step towards greatness 🏆.",
+    "Keep pushing, the future is bright 🔥☀️.",
+    "Success starts with the courage to begin 🌟.",
+    "Your hard work will pay off—trust the process 🔑.",
+    "Stay positive, work hard, and make it happen 💼💪.",
+    "Don’t just chase your dreams, catch them 🏃‍♂️!"
+  ];
+
+let index = 0;
+
+function changeMessage() {
+  const messageElement = document.getElementById('motivational-message');
+  messageElement.style.opacity = 0;  // Fade out
+  
+  setTimeout(() => {
+    messageElement.textContent = messages[index];  // Change message
+    messageElement.style.opacity = 1;  // Fade in
+  }, 1000);  // Wait for 1 second for fade out effect
+  
+  index = (index + 1) % messages.length;  // Move to the next message
+}
+
+// Change message every 8 seconds
+setInterval(changeMessage, 8000);
+
+// Initial message
+changeMessage();
+
   </script>
 </body>
 </html>
